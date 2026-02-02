@@ -19,3 +19,5 @@ To contribute, you can submit your changes, and the project contributors will ch
 ## FAQ
 ### How to update automatically ?
 In your **.bashrc** file, add `b42` on the start of a new line after `. ~/.bash42` so it will run the update command on the start of the shell.
+### You don't know where to start ?
+Run the `help42` command to see all that is available.
