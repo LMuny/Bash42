@@ -19,6 +19,6 @@ alias gc="git clone"
 ### Bash42 ###
 ## All commands below are used for this project, please do not touch them
 # b42: Update to the latest version
-alias b42="wget https://raw.githubusercontent.com/SaikoroAsh/Bash42/refs/heads/main/.bash42 -O ~/.bash42 && source ~/.bash42"
+alias b42="wget https://raw.githubusercontent.com/SaikoroAsh/Bash42/refs/heads/main/.bash42 -O ~/.bash42.tmp && mv ~/.bash42.tmp ~/.bash42 && source ~/.bash42"
 # help42: Shows this help page
 alias help42="grep -B 1 '^alias' ~/.bash42 | grep '^# ' | cut -c3- | grep --color=auto '^\S*:'"
