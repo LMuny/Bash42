@@ -1,14 +1,22 @@
 ##### BASH 42 #####
 
 ### Editor & Compilation ###
+# Compile with all moulinette flags
 alias ccw="cc -Wall -Werror -Wextra"
+# run the norminette
 alias ff="norminette"
+# open vim
 alias v="vim"
 
 ### Git ###
+# add all the .c file of your directory and sub-directories to git and open a commit message window
 alias gg="find . -name '*.c' -exec git add {} ';' && git commit"
+# run git push on the main branch
 alias gpom="git push origin main"
+# run git clone
 alias gc="git clone"
 
 ### Bash42 ###
+## all commands below are used for this project, please do not touch them
+# update to the latest version
 alias b42="wget https://raw.githubusercontent.com/SaikoroAsh/Bash42/refs/heads/main/.bash42 -O ~/.bash42 && source ~/.bash42"
