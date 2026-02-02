@@ -23,8 +23,11 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+##### BASH 42 #####
+### Editor & Compilation ###
 alias ccw="cc -Wall -Werror -Wextra"
 alias ff="norminette"
-alias gg="find . -name '*.c' -exec git add {} ';' && git commit"
 alias v="vim"
+### Git ###
+alias gg="find . -name '*.c' -exec git add {} ';' && git commit"
 alias gpom="git push origin main"
