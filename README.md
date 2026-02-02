@@ -12,3 +12,10 @@ echo ". ~/.bash42" >> ~/.bashrc && source ~/.bashrc
 After your first download, you can run this command to update to the last version:
 
 `b42`
+
+## Contribute
+To contribute, you can submit your changes, and the project contributors will check the merge requests daily to accept or reject them.
+
+## FAQ
+### How to update automatically ?
+Coming Soon
