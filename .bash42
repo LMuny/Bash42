@@ -8,6 +8,7 @@ alias v="vim"
 ### Git ###
 alias gg="find . -name '*.c' -exec git add {} ';' && git commit"
 alias gpom="git push origin main"
+alias gc="git clone"
 
 ### Bash42 ###
 alias b42="wget https://raw.githubusercontent.com/SaikoroAsh/Bash42/refs/heads/main/.bash42 -O ~/.bash42 && source ~/.bash42"
