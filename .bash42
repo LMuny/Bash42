@@ -13,7 +13,7 @@ alias v="vim"
 alias gg="find . -name '*.c' -exec git add {} ';' && git commit"
 # gpom: Run git push on the main branch
 alias gpom="git push origin main"
-# dc: Run git clone
+# gc: Run git clone
 alias gc="git clone"
 
 ### Bash42 ###
