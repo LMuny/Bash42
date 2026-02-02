@@ -14,7 +14,7 @@ After your first download, you can run this command to update to the last versio
 `b42`
 
 ## Contribute
-To contribute, you can submit your changes, and the project contributors will check the merge requests daily to accept or reject them.
+To contribute, you can submit your changes, and the project contributors will check the pull requests daily to accept or reject them.
 
 ## FAQ
 ### How to update automatically ?
