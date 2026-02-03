@@ -7,6 +7,8 @@ alias ccw="cc -Wall -Werror -Wextra"
 alias ff="norminette"
 # v: Open vim
 alias v="vim"
+# vh: Open vim with header 42
+alias vh="vim +Stdheader"
 # a: Execute the a.out file
 alias a="./a.out"
 
