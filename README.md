@@ -1,5 +1,5 @@
 # Bash 42
-
+*Warning : you should know your commands and how they works before using this project.*
 ## Usage
 
 If this is your first download, run this:
