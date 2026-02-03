@@ -7,6 +7,8 @@ alias ccw="cc -Wall -Werror -Wextra"
 alias ff="norminette"
 # v: Open vim
 alias v="vim"
+# a: Execute the a.out file
+alias a="./a.out"
 
 ### Git ###
 # gg: Add all the .c file of your directory and sub-directories to git and open a commit message window
