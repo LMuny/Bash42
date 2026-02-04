@@ -7,22 +7,31 @@ alias ccw="cc -Wall -Werror -Wextra"
 alias ff="norminette"
 # v: Open vim
 alias v="vim"
-# vh: Open vim with header 42
-alias vh="vim +Stdheader"
-# a: Execute the a.out file
-alias a="./a.out"
 
 ### Git ###
 # gg: Add all the .c file of your directory and sub-directories to git and open a commit message window
 alias gg="find . -name '*.c' -exec git add {} ';' && git commit"
 # gpom: Run git push on the main branch
 alias gpom="git push origin main"
-# gc: Run git clone
+# dc: Run git clone
 alias gc="git clone"
 
 ### Bash42 ###
 ## All commands below are used for this project, please do not touch them
-# b42: Update to the latest version
-alias b42="wget https://raw.githubusercontent.com/SaikoroAsh/Bash42/refs/heads/main/.bash42 -O ~/.bash42.tmp && mv ~/.bash42.tmp ~/.bash42 && source ~/.bash42"
 # help42: Shows this help page
 alias help42="grep -B 1 '^alias' ~/.bash42 | grep '^# ' | cut -c3- | grep --color=auto '^\S*:'"
+unalias b42 2>/dev/null
+# b42: Update to the latest version
+b42()
+{
+	wget -q https://raw.githubusercontent.com/SaikoroAsh/Bash42/refs/heads/main/.bash42 -O ~/.bash42.tmp 
+	if [[ $? == 0 ]]; then
+		dif=$(diff ~/.bash42 ~/.bash42.tmp | grep -B 1 '^> alias\|^> \S*(' | grep "^> #" | cut -c5- | sed -E 's/^(\S*):(.*)/New command: '$(echo -e '\033[1;31m')'\1'$(echo -e '\033[0m')':\2/')
+		if [[ -n $dif ]]; then
+			echo $dif
+		else
+			echo -e '\033[32mBash42 is already up to date\033[0m'
+		fi
+		mv ~/.bash42.tmp ~/.bash42 && source ~/.bash42
+	fi
+}
