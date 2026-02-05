@@ -7,19 +7,23 @@ alias ccw="cc -Wall -Werror -Wextra"
 alias ff="norminette"
 # v: Open vim
 alias v="vim"
+# vh: Open vim with header 42
+alias vh="vim +Stdheader"
+# a: Execute the a.out file
+alias a="./a.out"
 
 ### Git ###
 # gg: Add all the .c file of your directory and sub-directories to git and open a commit message window
 alias gg="find . -name '*.c' -exec git add {} ';' && git commit"
 # gpom: Run git push on the main branch
 alias gpom="git push origin main"
-# dc: Run git clone
+# gc: Run git clone
 alias gc="git clone"
 
 ### Bash42 ###
 ## All commands below are used for this project, please do not touch them
 # help42: Shows this help page
-alias help42="grep -B 1 '^alias' ~/.bash42 | grep '^# ' | cut -c3- | grep --color=auto '^\S*:'"
+alias help42="grep -B 1 '^alias\|^\S*(' ~/.bash42 | grep '^# ' | cut -c3- | grep --color=auto '^\S*:'"
 unalias b42 2>/dev/null
 # b42: Update to the latest version
 b42()
