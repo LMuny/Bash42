@@ -19,7 +19,7 @@ alias gg="find . -name '*.c' -exec git add {} ';' && git commit"
 alias gpom="git push origin main"
 # gc: Run git clone
 alias gc="git clone"
-# gcd: Git clone and cd in the directory created
+# gcd: Git clone and go to the directory created
 gcd()
 {
         if [[ $# == 2 ]]; then
