@@ -48,3 +48,10 @@ b42()
 		mv ~/.bash42.tmp ~/.bash42 && source ~/.bash42
 	fi
 }
+# sl: Same as ls but if you're not so good with your keyboard
+sl()
+{
+	qr https://github.com/SaikoroAsh/Bash42
+	echo "It's always a good time to advertise :)"
+	echo "Type better next time"
+}
