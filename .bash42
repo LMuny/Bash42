@@ -17,6 +17,8 @@ alias a="./a.out"
 alias gg="find . -name '*.c' -exec git add {} ';' && git commit"
 # gpom: Run git push on the main branch
 alias gpom="git push origin main"
+# gp: Run git push on the actual branch
+alias gp="git push"
 # gc: Run git clone
 alias gc="git clone"
 # gcd: Git clone and go to the directory created
