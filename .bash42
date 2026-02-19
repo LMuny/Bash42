@@ -50,6 +50,7 @@ rv()
 		fi
 		echo "Current repository is located at https://github.com/"$(git config --get remote.origin.url | cut -d: -f 2)
 	fi
+}
 # gcd: Git clone and go to the directory created
 gcd()
 {
