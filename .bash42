@@ -17,6 +17,8 @@ alias a="./a.out"
 alias gg="find . -name '*.c' -exec git add {} ';' && git commit"
 # gpom: Run git push on the main branch
 alias gpom="git push origin main"
+# gp: Run git push on the actual branch
+alias gp="git push"
 # gc: Run git clone
 alias gc="git clone"
 # rv: Checks multiple things to prepare for a review
@@ -48,6 +50,14 @@ rv()
 		fi
 		echo "Current repository is located at https://github.com/"$(git config --get remote.origin.url | cut -d: -f 2)
 	fi
+# gcd: Git clone and go to the directory created
+gcd()
+{
+        if [[ $# == 2 ]]; then
+                git clone $1 $2 && cd $2
+        else
+                echo -e '\033[31mPlease specify a directory name\033[0m'
+        fi
 }
 
 ### Bash42 ###
@@ -68,4 +78,11 @@ b42()
 		fi
 		mv ~/.bash42.tmp ~/.bash42 && source ~/.bash42
 	fi
+}
+# sl: Same as ls but if you're not so good with your keyboard
+sl()
+{
+	qr https://github.com/SaikoroAsh/Bash42
+	echo "It's always a good time to advertise :)"
+	echo "Type better next time"
 }
