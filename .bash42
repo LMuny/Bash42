@@ -65,9 +65,13 @@ gcd()
 
 ### Bash42 ###
 ## All commands below are used for this project, please do not touch them
+unalias help42 2>/dev/null
 # help42: Shows this help page
-# alias help42="grep -B 1 '^###|alias\|^\S*(' ~/.bash42 | grep '^# ' | cut -c3- | grep --color=auto '^\S*:'"
-alias help42="echo -e \"$(grep -B 1 '^### \|^alias\|^\S*(' ~/.bash42 | grep '^#\+' | sed 's/^### /\\033[1;32m/' | sed 's/ ###$/\\033[0m/' | sed 's/^# \(\S\+\):/\\033[1;91m\1\\033[0m:/')\""
+help42()
+{
+	text="$(grep -B 1 '^### \|^alias\|^\S*(' ~/.bash42 | grep '^#\+' | sed 's/^### /\\033[1;32m/' | sed 's/ ###$/\\033[0m/' | sed 's/^# \(\S\+\):/\\033[1;91m\1\\033[0m:/')"
+	echo -e "$text"
+}
 unalias b42 2>/dev/null
 # b42: Update to the latest version
 b42()
