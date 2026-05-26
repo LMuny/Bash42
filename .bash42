@@ -17,6 +17,10 @@ alias p="python3"
 ### Git ###
 # gg: Add all the .c file of your directory and sub-directories to git and open a commit message window
 alias gg="find . -name '*.c' -exec git add {} ';' && git commit"
+# gu: Add all modified files
+alias gu="git add -u"
+# gs: Run git status
+alias gs="git status"
 # gpom: Run git push on the main branch
 alias gpom="git push origin main"
 # gp: Run git push on the actual branch
