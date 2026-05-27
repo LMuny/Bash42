@@ -78,6 +78,12 @@ gd()
 	git push
 }
 
+#gcp: Redirect your local repo to a a new remote 
+gcp()
+{
+	git remote remove origin
+	git remote add origin "$1"
+}
 ### Bash42 ###
 ## All commands below are used for this project, please do not touch them
 unalias help42 2>/dev/null
