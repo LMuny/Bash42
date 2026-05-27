@@ -71,7 +71,7 @@ gcd()
         fi
 }
 
-#gd: Commit to your git repo and pushes it directly
+# gd: Commit to your git repo and pushes it directly
 gd()
 {
 	git commit -m "$1"
